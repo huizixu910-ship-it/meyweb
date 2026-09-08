@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人成果展示作品集 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Font Awesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">MyPortfolio.</div>
+        <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#projects">四年成果展示</a></li>
+            <li><a href="#contact">聯絡我</a></li>
+        </ul>
+    </nav>
+
+    <!-- 個人 Hero 區塊 -->
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <div class="avatar-placeholder">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
+            <p class="subtitle">大學四年專案紀錄與個人 IP 成果展示空間</p>
+            <p class="description">
+                這裡記錄了我從大一到大四的學習軌跡、課堂作業與實作專案。致力於不斷探索新知與創作！
+            </p>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:your-email@example.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 大學四年成果區塊 -->
+    <section id="projects" class="projects-section">
+        <h2>大學四年專案成果</h2>
+        
+        <!-- 年級篩選按鈕 -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部展示</button>
+            <button class="filter-btn" data-filter="year1">大一</button>
+            <button class="filter-btn" data-filter="year2">大二</button>
+            <button class="filter-btn" data-filter="year3">大三</button>
+            <button class="filter-btn" data-filter="year4">大四</button>
+        </div>
+
+        <!-- 專案卡片列表 -->
+        <div class="projects-grid">
+            
+            <!-- 大一專案範例 -->
+            <div class="project-card" data-category="year1">
+                <div class="card-tag">大一</div>
+                <h3>基礎程式設計作業</h3>
+                <p>大一上學期的第一個專案，學習基礎語法與演算法邏輯應用。</p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>基礎語法</span>
+                </div>
+                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- 大二專案範例 -->
+            <div class="project-card" data-category="year2">
+                <div class="card-tag">大二</div>
+                <h3>網頁前端設計實作</h3>
+                <p>運用 HTML/CSS/JS 打造響應式網頁，學習前端互動效果與 UI/UX 設計。</p>
+                <div class="tags">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- 大三專案範例 -->
+            <div class="project-card" data-category="year3">
+                <div class="card-tag">大三</div>
+                <h3>團隊合作專案</h3>
+                <p>大三核心課程專案，與團隊共同開發完整的應用系統並進行版本控制。</p>
+                <div class="tags">
+                    <span>Vue / React</span>
+                    <span>Git</span>
+                    <span>API</span>
+                </div>
+                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- 大四專案範例 -->
+            <div class="project-card" data-category="year4">
+                <div class="card-tag">大四</div>
+                <h3>畢業專題展示</h3>
+                <p>結合大學四年所學的綜合結晶，針對特定議題所提出的完整解決方案。</p>
+                <div class="tags">
+                    <span>畢業專題</span>
+                    <span>全端開發</span>
+                </div>
+                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 頁尾 / 聯絡資訊 -->
+    <footer id="contact">
+        <p>&copy; 2026 [你的名字]. All Rights Reserved.</p>
+        <p>Built with HTML, CSS, JavaScript & GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
