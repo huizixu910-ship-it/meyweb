@@ -1,118 +1,151 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人成果展示作品集 | Portfolio</title>
+    <title>府城甜室 | 臺南手作甜點專門店</title>
+    <!-- 引入外部 CSS 樣式表 -->
     <link rel="stylesheet" href="style.css">
-    <!-- 引入 Font Awesome 圖示庫 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- 導覽列 -->
-    <nav class="navbar">
-        <div class="logo">MyPortfolio.</div>
-        <ul class="nav-links">
-            <li><a href="#about">關於我</a></li>
-            <li><a href="#projects">四年成果展示</a></li>
-            <li><a href="#contact">聯絡我</a></li>
-        </ul>
-    </nav>
-
-    <!-- 個人 Hero 區塊 -->
-    <header id="about" class="hero">
-        <div class="hero-content">
-            <div class="avatar-placeholder">
-                <i class="fa-solid fa-user-astronaut"></i>
-            </div>
-            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
-            <p class="subtitle">大學四年專案紀錄與個人 IP 成果展示空間</p>
-            <p class="description">
-                這裡記錄了我從大一到大四的學習軌跡、課堂作業與實作專案。致力於不斷探索新知與創作！
-            </p>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:your-email@example.com"><i class="fa-solid fa-envelope"></i></a>
-            </div>
+    <header class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">府城甜室 <span class="subtitle">Tainan Dessert</span></h1>
+            <nav class="nav-links">
+                <a href="#hero">首頁</a>
+                <a href="#products">精選商品</a>
+                <a href="#delivery">配送說明</a>
+                <a href="#faq">常見問題</a>
+                <a href="#footer">關於我們</a>
+            </nav>
         </div>
     </header>
 
-    <!-- 大學四年成果區塊 -->
-    <section id="projects" class="projects-section">
-        <h2>大學四年專案成果</h2>
-        
-        <!-- 年級篩選按鈕 -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">全部展示</button>
-            <button class="filter-btn" data-filter="year1">大一</button>
-            <button class="filter-btn" data-filter="year2">大二</button>
-            <button class="filter-btn" data-filter="year3">大三</button>
-            <button class="filter-btn" data-filter="year4">大四</button>
-        </div>
-
-        <!-- 專案卡片列表 -->
-        <div class="projects-grid">
-            
-            <!-- 大一專案範例 -->
-            <div class="project-card" data-category="year1">
-                <div class="card-tag">大一</div>
-                <h3>基礎程式設計作業</h3>
-                <p>大一上學期的第一個專案，學習基礎語法與演算法邏輯應用。</p>
-                <div class="tags">
-                    <span>Python</span>
-                    <span>基礎語法</span>
-                </div>
-                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <!-- 大二專案範例 -->
-            <div class="project-card" data-category="year2">
-                <div class="card-tag">大二</div>
-                <h3>網頁前端設計實作</h3>
-                <p>運用 HTML/CSS/JS 打造響應式網頁，學習前端互動效果與 UI/UX 設計。</p>
-                <div class="tags">
-                    <span>HTML/CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <!-- 大三專案範例 -->
-            <div class="project-card" data-category="year3">
-                <div class="card-tag">大三</div>
-                <h3>團隊合作專案</h3>
-                <p>大三核心課程專案，與團隊共同開發完整的應用系統並進行版本控制。</p>
-                <div class="tags">
-                    <span>Vue / React</span>
-                    <span>Git</span>
-                    <span>API</span>
-                </div>
-                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <!-- 大四專案範例 -->
-            <div class="project-card" data-category="year4">
-                <div class="card-tag">大四</div>
-                <h3>畢業專題展示</h3>
-                <p>結合大學四年所學的綜合結晶，針對特定議題所提出的完整解決方案。</p>
-                <div class="tags">
-                    <span>畢業專題</span>
-                    <span>全端開發</span>
-                </div>
-                <a href="#" class="btn-link">檢視詳情 <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
+    <!-- 主視覺區塊 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>慢步府城，品味巷弄甜香</h2>
+            <p>嚴選在地小農食材與百年老宅靈感，為您獻上融合台南人情味的手作甜點。</p>
+            <a href="#products" class="btn-primary">探索美味甜點</a>
         </div>
     </section>
 
-    <!-- 頁尾 / 聯絡資訊 -->
-    <footer id="contact">
-        <p>&copy; 2026 [你的名字]. All Rights Reserved.</p>
-        <p>Built with HTML, CSS, JavaScript & GitHub Pages</p>
+    <!-- 商品展示區塊 -->
+    <section id="products" class="container section">
+        <h2 class="section-title">精選在地風味</h2>
+        <p class="section-desc">每一款甜點，都訴說著一段府城的故事與堅持。</p>
+        
+        <div class="product-grid">
+            <!-- 商品 1：府城冬瓜檸檬磅蛋糕 -->
+            <div class="product-card">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFOITV5mb4OogcBddYU4wmeQlYkkfbsazaa2hEysseKw&s=10" target="_blank" class="product-img-wrapper" title="點擊檢視原圖">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFOITV5mb4OogcBddYU4wmeQlYkkfbsazaa2hEysseKw&s=10" alt="府城冬瓜檸檬磅蛋糕" onerror="this.src='https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80'">
+                </a>
+                <div class="product-info">
+                    <h3>府城冬瓜檸檬磅蛋糕</h3>
+                    <p class="product-specs">尺寸：6吋 / 約 450g</p>
+                    <p class="product-desc">使用台南在地老字號冬瓜糖磚熬煮糖漿，搭配新鮮檸檬清香，口感濕潤酸甜。</p>
+                    <div class="product-footer">
+                        <span class="price">$ NT 480</span>
+                        <a href="#delivery" class="btn-secondary">了解配送</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品 2：東山柴燒龍眼乳酪塔 -->
+            <div class="product-card">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNerb3PsRukqWrFqs5JvKIL97NOa_uTSeSUXj2-bJTvQ&s=10" target="_blank" class="product-img-wrapper" title="點擊檢視原圖">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNerb3PsRukqWrFqs5JvKIL97NOa_uTSeSUXj2-bJTvQ&s=10" alt="東山柴燒龍眼乳酪塔" onerror="this.src='https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80'">
+                </a>
+                <div class="product-info">
+                    <h3>東山柴燒龍眼乳酪塔</h3>
+                    <p class="product-specs">尺寸：5吋 / 約 380g</p>
+                    <p class="product-desc">嚴選台南東山古法柴燒龍眼乾，融入濃郁滑順的北海道乳酪中，層次豐富。</p>
+                    <div class="product-footer">
+                        <span class="price">$ NT 520</span>
+                        <a href="#delivery" class="btn-secondary">了解配送</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品 3：玉井愛文芒果干 -->
+            <div class="product-card">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdTafWbXIBIZw1zOAqZVbLOo_HYx1ZDwGOyFt92XcFQ&s=10" target="_blank" class="product-img-wrapper" title="點擊檢視原圖">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdTafWbXIBIZw1zOAqZVbLOo_HYx1ZDwGOyFt92XcFQ&s=10" alt="玉井愛文芒果干" onerror="this.src='https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80'">
+                </a>
+                <div class="product-info">
+                    <h3>玉井愛文芒果干</h3>
+                    <p class="product-specs">規格：精裝夾鏈袋裝 / 約 200g</p>
+                    <p class="product-desc">嚴選台南玉井新鮮愛文芒果低溫慢烘，無添加人工色素，保留濃郁果香與Q彈嚼勁。</p>
+                    <div class="product-footer">
+                        <span class="price">$ NT 280</span>
+                        <a href="#delivery" class="btn-secondary">了解配送</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 配送說明區塊 -->
+    <section id="delivery" class="delivery-section">
+        <div class="container section">
+            <h2 class="section-title">配送與保存說明</h2>
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <h3>🚚 配送方式</h3>
+                    <p><strong>常溫/冷藏宅配</strong>：常溫或低溫配送，確保商品完好送達。</p>
+                    <p><strong>台南工作室自取</strong>：提供府城中西區工作室預約自取免運費服務。</p>
+                </div>
+                <div class="delivery-card">
+                    <h3>⏱️ 配送天數與運費</h3>
+                    <p>下單後（完成付款）約 3-5 個工作天內出貨。運費一律收 $160 元，滿 $1,500 元即享免運優惠。</p>
+                </div>
+                <div class="delivery-card">
+                    <h3>❄️ 保存方式</h3>
+                    <p><strong>保存建議</strong>：請放置於陰涼乾燥處，開封後建議冷藏並儘速食用完畢。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常見問題 (FAQ) -->
+    <section id="faq" class="container section">
+        <h2 class="section-title">常見問題 FAQ</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4>Q1：網站顯示「教學用途聲明」，這是真的可以買嗎？</h4>
+                <p>A：本網站為網頁設計與使用者體驗研究之教學展示專案，目前不具備真實金流與商業交易功能。感謝您的關注與測試！</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q2：甜點與果乾含有哪些過敏原資訊？</h4>
+                <p>A：部分商品可能含有蛋、奶類、麩質或芒果成分。若您有特殊飲食需求，建議先參考商品描述或聯繫我們。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q3：收到商品如果破損怎麼辦？</h4>
+                <p>A：若不幸遇到物流配送導致嚴重毀損，請於收件後 2 小時內拍照存證並私訊我們，我們將協助處理。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾與教學用途聲明 -->
+    <footer id="footer" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>府城甜室 Tainan Dessert</h3>
+                <p>地址：台南市中西區民生路一段（示範據點）</p>
+                <p>營業時間：週三至週日 13:00 - 19:00</p>
+            </div>
+            <div class="disclaimer">
+                <p class="notice-tag">【教學用途聲明】</p>
+                <p>本網站僅供學術研究、網頁前端設計及使用者互動訪談之教學用途使用，不提供任何商業營利販售與線上交易服務。</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 府城甜室 Academic Project. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
