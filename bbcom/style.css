@@ -1,0 +1,488 @@
+/* ==========================================================================
+   CSS Reset & 變數設定 (文青大地色系)
+   ========================================================================== */
+:root {
+    --bg-main: #f9f8f5;          /* 暖米白底色 */
+    --bg-card: #ffffff;          /* 純白卡片背景 */
+    --text-primary: #2c2a29;     /* 濃墨黑文字 */
+    --text-secondary: #706c68;   /* 質感灰內文 */
+    --accent-color: #8c7355;     /* 文青棕/大地色系 */
+    --accent-light: #f2ede4;     /* 淡沙色標籤背景 */
+    --border-color: #e5dfd5;     /* 柔和邊框色 */
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 12px 32px rgba(140, 115, 85, 0.12);
+    --font-heading: 'Noto Serif TC', serif;
+    --font-body: 'Noto Sans TC', sans-serif;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   導覽列 (Navbar)
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(249, 248, 245, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 16px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.logo-en {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+}
+
+.icon-btn:hover {
+    background-color: var(--accent-light);
+    color: var(--accent-color);
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 0.7rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Hero 形象橫幅
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding: 100px 0;
+    background-color: #eee9e0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(140, 115, 85, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #725d43;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   商品展示區 (Product Grid)
+   ========================================================================== */
+.products-section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.section-header .subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.product-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-smooth);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: #d6ccbe;
+}
+
+.card-image-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 比例圖片容器 */
+    background-color: #f2f0eb;
+    overflow: hidden;
+}
+
+.card-image-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-image-wrap img {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(44, 42, 41, 0.85);
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+.quick-add-btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+
+.product-card:hover .quick-add-btn {
+    bottom: 12px;
+}
+
+.quick-add-btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.style-tag {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--accent-light);
+    color: var(--accent-color);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.material-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 8px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   品牌理念 Section
+   ========================================================================== */
+.about-section {
+    background-color: #eee9e0;
+    padding: 70px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-container {
+    max-width: 680px;
+}
+
+.about-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.about-section p {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   頁尾 (Footer)
+   ========================================================================== */
+.footer {
+    background-color: #242221;
+    color: #d1ccc5;
+    padding-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #383533;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-heading);
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.footer-links h4, .footer-social h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    font-size: 0.88rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-social p {
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    color: #8c8680;
+}
+
+/* ==========================================================================
+   響應式設計 (Responsive RWD)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* 簡化行動端，可依需求加入漢堡選單 */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-add-btn {
+        bottom: 12px; /* 行動裝置上直接顯示加入購物車按鈕 */
+    }
+}
