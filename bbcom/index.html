@@ -276,5 +276,25 @@
         </div>
     </footer>
 
+    <!-- 購物車互動效果 Script -->
+    <script>
+        let cartCount = 0;
+        const cartBadge = document.querySelector('.cart-badge');
+        const cartBtn = document.querySelector('.cart-btn');
+        const quickAddBtns = document.querySelectorAll('.quick-add-btn');
+
+        quickAddBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                cartCount++;
+                cartBadge.textContent = cartCount;
+
+                // 觸發購物車按鈕的震動與發光特效
+                cartBtn.classList.remove('glow-shake');
+                void cartBtn.offsetWidth; // 觸發重繪以重啟動畫
+                cartBtn.classList.add('glow-shake');
+            });
+        });
+    </script>
 </body>
 </html>
