@@ -145,25 +145,6 @@ a {
 }
 
 /* ==========================================================================
-   購物車震動與發光特效 (Glow & Shake Animation)
-   ========================================================================== */
-@keyframes glowAndShake {
-    0% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 rgba(140, 115, 85, 0); }
-    20% { transform: scale(1.15) rotate(-10deg); box-shadow: 0 0 15px rgba(140, 115, 85, 0.8), 0 0 25px rgba(212, 175, 55, 0.6); }
-    40% { transform: scale(1.15) rotate(10deg); box-shadow: 0 0 20px rgba(140, 115, 85, 1), 0 0 30px rgba(212, 175, 55, 0.8); }
-    60% { transform: scale(1.15) rotate(-10deg); box-shadow: 0 0 15px rgba(140, 115, 85, 0.8), 0 0 25px rgba(212, 175, 55, 0.6); }
-    80% { transform: scale(1.1) rotate(5deg); box-shadow: 0 0 10px rgba(140, 115, 85, 0.4); }
-    100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 rgba(140, 115, 85, 0); }
-}
-
-.glow-shake {
-    animation: glowAndShake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    background-color: var(--accent-light);
-    color: var(--accent-color);
-    border-radius: 50%;
-}
-
-/* ==========================================================================
    Hero 形象橫幅
    ========================================================================== */
 .hero {
@@ -483,6 +464,25 @@ a {
     padding: 20px 0;
     font-size: 0.8rem;
     color: #8c8680;
+}
+
+/* ==========================================================================
+   新增：震動與發光特效動畫 (Shake & Glow Effect)
+   ========================================================================== */
+@keyframes shakeGlow {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.1) translateX(-4px) rotate(-3deg); }
+    30% { transform: scale(1.1) translateX(4px) rotate(3deg); }
+    45% { transform: scale(1.1) translateX(-4px) rotate(-2deg); }
+    60% { transform: scale(1.1) translateX(4px) rotate(2deg); }
+    75% { transform: scale(1.05) translateX(-2px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+.shake-glow {
+    animation: shakeGlow 0.6s ease-in-out;
+    box-shadow: 0 0 16px 4px rgba(140, 115, 85, 0.7) !important;
+    border-color: var(--accent-color) !important;
 }
 
 /* ==========================================================================
